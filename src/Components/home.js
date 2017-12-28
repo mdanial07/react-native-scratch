@@ -11,6 +11,7 @@ import {
     Text,
     View,
     Image,
+    Button,
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -37,6 +38,7 @@ export default class Home extends Component {
                 <Text style={styles.instructions}>
                     {instructions}
                 </Text>
+                <Button title='About us' onPress={() => this.props.navigation.navigate('about')} />
             </View>
         );
     }
