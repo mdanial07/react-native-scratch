@@ -21,6 +21,13 @@ const instructions = Platform.select({
 });
 
 export default class Home extends Component {
+    static navigationOptions = {
+        title: 'Home Page',
+        headerTintColor: '#fff',
+        headerStyle: {
+            backgroundColor: 'red'
+        }
+    }
     render() {
         return (
             <View style={styles.container}>
