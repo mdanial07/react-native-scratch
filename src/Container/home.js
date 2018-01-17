@@ -13,29 +13,29 @@ import {
     Image,
     Button,
 } from 'react-native';
+import CustomHeader from '../Components/header'
+
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
+        'Cmd+D or shake for dev menu',
     android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+        'Shake or press menu button for dev menu',
 });
 
 export default class Home extends Component {
     static navigationOptions = {
-        title: 'Home Page',
-        headerTintColor: '#fff',
-        headerStyle: {
-            backgroundColor: 'red'
-        }
+        header: null
     }
     render() {
+        const title = 'Home Page'
         return (
             <View style={styles.container}>
+                <CustomHeader title={title} />
                 <Image
                     style={{ width: 100, height: 100 }}
                     source={{ uri: 'http://geekycentral.com/wp-content/uploads/2017/09/react-native.png' }}
-                    />
+                />
                 <Text style={styles.welcome}>
                     This is Home Page
                 </Text>
@@ -53,7 +53,7 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
